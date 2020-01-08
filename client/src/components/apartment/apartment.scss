@@ -1,0 +1,71 @@
+@import '../../assets/scss/variables'; 
+
+.card {
+    position: relative;
+    height: 40rem;
+    border-radius: .2em;
+    overflow: hidden;
+    background-color: $color-light;
+    box-shadow: 0 1rem 2rem rgba($color-dark, .15);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 1rem 1rem rgba($color-dark, .15);
+    }
+
+    &__header {
+        position: relative;
+        display: block;
+        height: 21rem;
+        overflow: hidden;
+
+        &--content {
+            position: relative;
+            height: 100%;
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+                transition: 4s all;
+                transform-origin: 50% 50%;
+            }
+    
+            &:not(:hover) {
+                transform: scale(1, 1);
+                transition: 1s all;
+            }
+        }
+    }
+
+    &__body {
+        height: 40%;
+        padding: 1rem .5rem;
+
+        &--title {
+            margin-bottom: 1rem;
+        }
+
+        &--left {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        &--right {
+            text-align: right;
+        }
+    }
+
+    &__footer {
+        height: 10%;
+        padding: 0 .5rem;
+
+        &--left {
+            text-align: left;
+        }
+
+        &--right {
+            text-align: right;
+            color: $color-primary;
+            font-weight: bold;
+        }
+    }
+}

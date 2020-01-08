@@ -1,0 +1,23 @@
+@import '../../assets/scss/variables';
+
+nav {
+  position: relative;
+  padding: 2rem;
+  font-size: 1.6rem;
+  border-bottom: .3rem solid $color-primary;
+
+  .nav {
+    &--center {
+      text-align: center;
+      
+      &--image {
+        margin-top: -1vh;
+        margin-bottom: -1vh;
+      }
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.apartments {
+
+    &__filter {
+        height: 30vh;
+        padding: 10rem;
+        background-image: url('../../assets/kzvb_wallpaper.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__result {
+        padding: 2rem;
+    }
+}

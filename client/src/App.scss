@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+@import "./assets/scss/utilities";
+@import "./assets/scss/variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.login {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    url("./assets/kzvb_wallpaper.jpg");
+  background-size: cover;
+  width: 100%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85vh, 0 100%);
+
+  .container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+  }
+
+  &__logo {
+    width: 24%;
+    padding: 1rem;
+    margin-left: -3rem;
+  }
+
+  &__form {
+    position: relative;
+  }
+}
+
+.form {
+  input {
+    display: block;
+    height: 5rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgba($color-light, 0.5);
+    border: none;
+    border-bottom: 0.3rem solid transparent;
+    width: 100%;
+    color: $color-light;
+    transition: all 0.5s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-light, 0.15);
+      border-bottom: 0.3rem solid $color-light;
+    }
+
+    &:focus:invalid {
+      color: $color-danger;
+      border-bottom: 0.3rem solid $color-danger;
+      box-shadow: 0 1rem 2rem rgba($color-danger, 0.4);
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-dark;
+    }
+  }
+
+  select {
+    display: block;
+    appearance: none;
+    height: 5rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgba($color-light, 0.5);
+    border: none;
+    width: 100%;
+    color: $color-light;
+    transition: all 0.5s;
+
+    option {
+      color: $color-dark;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-light, 0.15);
+    }
+
+    &:focus:invalid {
+      color: $color-danger;
+      box-shadow: 0 1rem 2rem rgba($color-danger, 0.4);
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-dark;
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 0.7rem;
+    margin-top: 0.7rem;
+    color: $color-lighten-2;
+    transition: all 0.5s;
+  }
+
+  input:placeholder-shown + label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem);
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  transition: all 0.3s;
+
+  &:link,
+  &:visited {
+    color: $color-light;
+    background-image: linear-gradient(to left top, $color-dark, $color-darken-2);
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 1rem rgba($color-dark, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 1rem 2rem rgba($color-dark, 0.15);
+  }
+}
+
+.home {
+  position: relative;
+  height: 40vh;
+  padding: 10rem;
+
+  &__header {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3.5rem;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    color: transparent;
+    background-size: cover;
+    -webkit-background-clip: text;
+  }
+}
